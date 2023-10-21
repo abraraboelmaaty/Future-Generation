@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "UploadCourceFile";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form asp-action="UploadFile" asp-controller="Cource" method="post">
+    <input type="file" name="file" class="form-control"/>
+    <input type="submit" class="btn btn-sucess" value="Upload" />
+    @ViewBag.Message
+</form>

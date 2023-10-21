@@ -1,0 +1,21 @@
+﻿@model Cource
+@{
+    ViewBag.Title = "Cource";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if(Model != null)
+{
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text"><span class="fw-bold">Capacity:</span>@Model.Capacity</p>
+        <p class="card-text"><span class="fw-bold">Capacity:</span>@Model.Cost</p>     
+        <p class="card-text"><span class="fw-bold">Capacity:</span>@Model.StartDate</p>
+        <p class="card-text"><span class="fw-bold">Capacity:</span>@Model.EndDate</p>
+        <p class="card-text"><span class="fw-bold">Capacity:</span>@Enum.GetName(typeof(Enums.CourceStatus),Model.Status)</p>
+        <a class="btn btn-primary" href="@Model.CourseSyllabus" >CourseSyllabus</a>
+        <a class="btn btn-secondary" asp-action="GetAll" asp-controller="Cource" >CourceList</a>
+        <a class="btn btn-warning" href="/Cource/Edit/@Model.ID" >Edit</a>
+      </div>
+    </div>
+}

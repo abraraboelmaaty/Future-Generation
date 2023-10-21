@@ -1,0 +1,48 @@
+﻿@model List<Cource> 
+@{
+    ViewBag.Title = "AllCources";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.Count > 0)
+{
+    <text>
+        <table class="table table-border table-hover" width="50%">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Capacity</th>
+                <th>Cost</th>
+                <th>StartDate</th>
+                <th>EndDate</th>
+                <th>CourseSyllabus</th>
+                <th>Actions</th>
+            </tr>
+              @foreach(var cource in Model)
+            {
+                <tr>
+                    <td>@cource.ID</td>
+                    <td>@cource.Name</td>
+                    <td>@cource.Status</td>
+                    <td>@cource.Capacity</td>
+                    <td>@cource.Cost</td>
+                    <td>@cource.StartDate</td>
+                    <td>@cource.EndDate</td>
+                    @if (!string.IsNullOrEmpty(cource.CourseSyllabus))
+                    {
+                       <td><a class="btn btn-primary" href="@cource.CourseSyllabus">File</a></td>
+                    }
+                    <td><a class="btn btn-secondary" href="/Cource/getById/@cource.ID">Details</a></td>
+                    <td><a class="btn btn-warning" href="/Cource/Edit/@cource.ID">Edit</a></td>
+                    <td><a class="btn btn-danger" href="/Cource/Delete/@cource.ID">Delete</a></td>
+                </tr>
+                
+            }
+        </table>
+    </text>        
+}
+<a class="btn btn-primary" asp-controller="Cource" asp-action="Create">Add Cource</a>
+
+
+

@@ -1,0 +1,44 @@
+﻿@model CourceVM
+@{
+    ViewBag.Title = "NewCource";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form asp-action="Create" enctype="multipart/form-data" asp-controller="Cource" method="post">
+    <div class="container">
+        <div class="form-group m-2">
+             <lable for="Name" >Name</lable>
+            <input asp-for="Name" class="form-control"/>
+        </div>  
+        <div class="form-group m-2">
+            <lable for="Status">Status</lable>
+            <select asp-for="Status" asp-items="Html.GetEnumSelectList<Enums.CourceStatus>()" class="form-control">
+                <object slected="selected" value="">Please Select Cource Status....</object>
+            </select>
+        </div> 
+        <div class="form-group m-2">
+            <lable for="Capacity" >Capacity</lable>
+            <input asp-for="Capacity" class="form-control"/>
+        </div>
+        <div class="form-group m-2">
+            <lable for="Cost" >Cost</lable>
+            <input asp-for="Cost" class="form-control"/>
+        </div> 
+        <div class="form-group m-2">
+            <lable for="StartDate" >StartDate</lable>
+            <input asp-for="StartDate" class="form-control"/>
+        </div>
+        <div class="form-group m-2">
+            <lable for="EndDate">EndDate</lable>
+            <input asp-for="EndDate "class="form-control"/>
+        </div> 
+        <div class="form-group m-2">
+            <label asp-for="CourseSyllabus" class="control-label"></label>
+            <div class="custom-file">
+                <input asp-for="CourseSyllabus" class="custom-file-input">
+            </div
+        </div>
+        <div>
+             <input type="submit" class="btn btn-success"  value="Save" />
+        </div> 
+    </div>
+</form>

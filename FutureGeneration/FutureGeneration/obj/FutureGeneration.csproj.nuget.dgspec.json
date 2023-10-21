@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\ابرار\\ITI\\companies tasks\\FutureGenerationTask\\FutureGeneration\\FutureGeneration\\FutureGeneration.csproj": {}
+    "H:\\ابرار\\ITI\\companies tasks\\FutureGeneration\\FutureGeneration\\FutureGeneration\\FutureGeneration.csproj": {}
   },
   "projects": {
-    "H:\\ابرار\\ITI\\companies tasks\\FutureGenerationTask\\FutureGeneration\\FutureGeneration\\FutureGeneration.csproj": {
+    "H:\\ابرار\\ITI\\companies tasks\\FutureGeneration\\FutureGeneration\\FutureGeneration\\FutureGeneration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\ابرار\\ITI\\companies tasks\\FutureGenerationTask\\FutureGeneration\\FutureGeneration\\FutureGeneration.csproj",
+        "projectUniqueName": "H:\\ابرار\\ITI\\companies tasks\\FutureGeneration\\FutureGeneration\\FutureGeneration\\FutureGeneration.csproj",
         "projectName": "FutureGeneration",
-        "projectPath": "H:\\ابرار\\ITI\\companies tasks\\FutureGenerationTask\\FutureGeneration\\FutureGeneration\\FutureGeneration.csproj",
+        "projectPath": "H:\\ابرار\\ITI\\companies tasks\\FutureGeneration\\FutureGeneration\\FutureGeneration\\FutureGeneration.csproj",
         "packagesPath": "C:\\Users\\CRIZMA MEGA STORE\\.nuget\\packages\\",
-        "outputPath": "H:\\ابرار\\ITI\\companies tasks\\FutureGenerationTask\\FutureGeneration\\FutureGeneration\\obj\\",
+        "outputPath": "H:\\ابرار\\ITI\\companies tasks\\FutureGeneration\\FutureGeneration\\FutureGeneration\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\CRIZMA MEGA STORE\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,6 +59,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.7, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [

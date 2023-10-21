@@ -8,7 +8,7 @@ namespace FutureGeneration.Models
         public int? StudentId { get; set; }
         [ForeignKey("Cource")]
         public int? CourceId { get; set; }
-        public virtual  Student Student { get; set; }
-        public virtual Cource  Cource { get; set; }
+        public virtual  Student? Student { get; set; }
+        public virtual Cource?  Cource { get; set; }
     }
 }
