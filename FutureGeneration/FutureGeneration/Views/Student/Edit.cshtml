@@ -1,0 +1,28 @@
+﻿@model Student
+@{
+    ViewBag.Title = "EditCource";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form asp-action="Edit"  asp-controller="Student" method="post">
+    <div class="container"> 
+        <div class="form-group m-3">
+            <input type="hidden" name="Name" value="@Model.Name"  class="form-control"/>
+        </div>
+        <div class="form-group m-3">
+            <lable for="Email" >Email</lable>
+            <input asp-for="Email" value="@Model.Email" class="form-control"/>
+        </div>
+        <div class="form-group m-3">
+            <lable for="Address" >Address</lable>
+            <input asp-for="Address" value="@Model.Address" class="form-control"/>
+        </div> 
+        <div class="form-group m-3">
+            <lable for="phone" >phone</lable>
+            <input asp-for="phone" value="@Model.phone" class="form-control"/>
+        </div>
+        <div>
+             <input type="submit" class="btn btn-success m-3"  value="Save" />
+        </div> 
+    </div>
+</form>
+

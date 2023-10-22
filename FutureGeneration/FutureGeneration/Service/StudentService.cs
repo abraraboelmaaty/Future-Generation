@@ -4,13 +4,14 @@ using FutureGeneration.Repository;
 
 namespace FutureGeneration.Service
 {
-    public class StudentService : IRepository<Student>
+    public class StudentService : IRepository<Student>,IRepositoryAssignStudent<StudentCource>
     {
         Entites db;
         public StudentService(Entites _db)
         {
             db = _db;
         }
+
         public int Create(Student std)
         {
             db.Add(std);
@@ -73,6 +74,19 @@ namespace FutureGeneration.Service
         public Student getById(int id)
         {
             return db.Students.FirstOrDefault(s => s.ID == id);
+        }
+        public int Create(StudentCource StudentCource)
+        {
+            db.Add(StudentCource);
+            try
+            {
+                int raws = db.SaveChanges();
+                return raws;
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
         }
     }
 }

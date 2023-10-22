@@ -1,0 +1,42 @@
+﻿@model List<Student> 
+@{
+    ViewBag.Title = "AllStudent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if(Model.Count > 0)
+{
+    <text>
+        <table class="table table-border table-hover" width="50%">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Capacity</th>
+                <th>Cost</th>
+                <th>Actions</th>
+            </tr>
+              @foreach(var student in Model)
+            {
+                <tr>
+                    <td>@student.ID</td>
+                    <td>@student.Name</td>
+                    <td>@student.Address</td>
+                    <td>@student.Email</td>
+                    <td>@student.phone</td>
+                    <td>
+                        <a class="btn btn-primary" href="/Student/getById/@student.ID">Details</a>
+                        <a class="btn btn-warning" href="/Student/Edit/@student.ID">Edit</a>
+                        <a class="btn btn-danger" href="/Student/Delete/@student.ID">Delete</a>
+                        <a class="btn btn-primary" href="/Student/AssignStudentToCource/@student.ID" >AssignStudentToCource</a>
+                    </td>
+                </tr>
+                
+            }
+        </table>
+    </text>        
+}
+<a class="btn btn-primary" asp-controller="Student" asp-action="Create">Add Cource</a>
+
+
+

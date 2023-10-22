@@ -6,6 +6,9 @@
 <form asp-action="Edit" enctype="multipart/form-data" asp-controller="Cource" method="post">
     <div class="container"> 
         <div class="form-group m-3">
+            <input type="hidden" name="Name" value="@Model.Name"  class="form-control"/>
+        </div>
+        <div class="form-group m-3">
             <lable for="Status">Status</lable>
             <select asp-for="Status" asp-items="Html.GetEnumSelectList<Enums.CourceStatus>()" class="form-control">
                 <object slected="selected" value="@Enum.GetName(typeof(Enums.CourceStatus),Model.Status)">Please Select Cource Status....</object>
