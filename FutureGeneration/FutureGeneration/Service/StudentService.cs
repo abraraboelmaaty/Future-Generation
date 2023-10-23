@@ -31,14 +31,33 @@ namespace FutureGeneration.Service
         {
             try
             {
-                var student = db.Students.FirstOrDefault(s => s.ID == id);
+                var student = db.Students.FirstOrDefault(c => c.ID == id);
                 if (student == null)
-                {
                     return -2;
+                var Relations = db.StudentCources.Where(sc => sc.StudentId == id).ToList();
+                if (Relations == null || Relations.Count == 0)
+                {
+                    db.Students.Remove(student);
+                    int raws = db.SaveChanges();
+                    return raws;
                 }
-                db.Students.Remove(student);
-                int raws = db.SaveChanges();
-                return raws;
+
+                else
+                {
+                    int RelationRaws = 0;
+                    foreach(var relation in Relations)
+                    {
+                        db.StudentCources.Remove(relation);
+                        RelationRaws ++;
+                    }
+                    if (RelationRaws == Relations.Count)
+                    {
+                        db.Students.Remove(student);
+                        int raws = db.SaveChanges();
+                        return raws;
+                    }
+                    return -3;
+                }
             }
             catch (Exception ex)
             {

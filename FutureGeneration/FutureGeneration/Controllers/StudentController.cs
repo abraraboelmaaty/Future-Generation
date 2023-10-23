@@ -65,6 +65,10 @@ namespace FutureGeneration.Controllers
             {
                 return RedirectToAction("GetAll");
             }
+            else if (raws == -2)
+                return Content("No Student Found With Selected Id .......");
+            else if (raws == -3)
+                return Content("the student has Relations .......");
             return Content("An Error ....");
         }
         public ActionResult AssignStudentToCource(int id)

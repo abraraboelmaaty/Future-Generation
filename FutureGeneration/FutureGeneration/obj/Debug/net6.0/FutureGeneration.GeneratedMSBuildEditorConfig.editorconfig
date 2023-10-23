@@ -51,6 +51,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[H:/ابرار/ITI/companies tasks/FutureGeneration/FutureGeneration/FutureGeneration/Views/Student/AssignStudentToCource.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxBc3NpZ25TdHVkZW50VG9Db3VyY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/ابرار/ITI/companies tasks/FutureGeneration/FutureGeneration/FutureGeneration/Views/Student/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/ابرار/ITI/companies tasks/FutureGeneration/FutureGeneration/FutureGeneration/Views/Student/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/ابرار/ITI/companies tasks/FutureGeneration/FutureGeneration/FutureGeneration/Views/Student/GetAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxHZXRBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/ابرار/ITI/companies tasks/FutureGeneration/FutureGeneration/FutureGeneration/Views/Student/getById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxnZXRCeUlkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [H:/ابرار/ITI/companies tasks/FutureGeneration/FutureGeneration/FutureGeneration/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

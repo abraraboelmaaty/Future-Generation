@@ -33,11 +33,32 @@ namespace FutureGeneration.Service
                 var cource = db.Cources.FirstOrDefault(c => c.ID == id);
                 if (cource == null)
                     return -2;
-                db.Cources.Remove(cource);
-                int raws = db.SaveChanges();
-                return raws;
+                var Relations = db.StudentCources.Where(sc => sc.CourceId == id).ToList();
+                if (Relations == null || Relations.Count == 0)
+                {
+                    db.Cources.Remove(cource);
+                    int raws = db.SaveChanges();
+                    return raws;
+                }
+
+                else
+                {
+                    int RelationRaws = 0;
+                    foreach (var relation in Relations)
+                    {
+                        db.StudentCources.Remove(relation);
+                        RelationRaws++;
+                    }
+                    if (RelationRaws == Relations.Count)
+                    {
+                        db.Cources.Remove(cource);
+                        int raws = db.SaveChanges();
+                        return raws;
+                    }
+                    return -3;
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return -1;
             }
@@ -55,7 +76,14 @@ namespace FutureGeneration.Service
                 oldCource.Capacity = crs.Capacity;
                 oldCource.Cost = crs.Cost;
                 oldCource.EndDate = crs.EndDate;
-                oldCource.CourseSyllabus = crs.CourseSyllabus;
+                if (!string.IsNullOrEmpty(crs.CourseSyllabus))
+                {
+                    oldCource.CourseSyllabus = crs.CourseSyllabus;
+                }
+                else
+                {
+                    oldCource.CourseSyllabus = oldCource.CourseSyllabus;
+                }
                 int raws = db.SaveChanges();
                 return raws;
             }

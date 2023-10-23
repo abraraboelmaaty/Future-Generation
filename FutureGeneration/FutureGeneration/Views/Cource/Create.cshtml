@@ -5,7 +5,7 @@
 }
 <form asp-action="Create" enctype="multipart/form-data" asp-controller="Cource" method="post">
     <div class="container">
-        <div class="form-group m-2">
+        <div class="form-group m-3">
              <lable for="Name" >Name</lable>
             <input asp-for="Name" class="form-control"/>
         </div>  
@@ -34,7 +34,7 @@
         <div class="form-group m-3">
             <label asp-for="CourseSyllabus" class="control-label"></label>
             <div class="custom-file">
-                <input asp-for="CourseSyllabus" class="custom-file-input">
+                <input asp-for="CourseSyllabus" class="form-control">
             </div
         </div>
         <div>
